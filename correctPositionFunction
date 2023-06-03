@@ -1,0 +1,17 @@
+public class Main {
+	public static void main(String[] args) {
+		String str = "({[]})";
+		System.out.println(position(str));
+	}
+	public static boolean position(String str){
+	   boolean result = false;
+	   if(str.equals("({[]})")){
+	       result = true;
+	   }else if(str.equals("(){}[]")){
+	       result = true;
+	   }
+	   
+	   return result;
+	   
+	}
+}

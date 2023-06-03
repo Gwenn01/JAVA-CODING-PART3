@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Enter a term: ");
+		int term = s.nextInt();
+		
+		System.out.print(fibonacci(term));
+		
+	}
+	public static int fibonacci(int term){
+	    int a = 0, b = 1, result = 0;
+	    
+	    for(int i = 1; i <= term-1; i++){
+	        result = a + b;
+	        a = b;
+            b = result;
+	    }
+	    return result;
+	}
+}

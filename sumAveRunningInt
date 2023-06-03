@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		double sum = 0, ave, count = 1;
+		System.out.print("Enter lower  bound: ");
+		int lb = s.nextInt();
+		System.out.print("Enter higher  bound: ");
+		int hb = s.nextInt();
+		
+		if(lb >= hb){
+			System.out.println("Invalid lower and higher bound");
+		}else{
+		for(int i = lb; i <= hb; i++){
+		    sum = sum + i;
+			count++;	
+		}	
+	System.out.println( "The to total sum of bound is " + sum);	
+	 ave = sum / count;
+	 System.out.println("The average is " + ave);	}
+	}
+}

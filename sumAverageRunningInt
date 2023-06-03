@@ -1,0 +1,17 @@
+public class Main {
+	public static void main(String[] args) {
+		
+		int sum = 0;
+		double ave;
+		int lowerBound = 1, upperBound = 100;
+		
+		for(int i = lowerBound; i <= upperBound; i++){
+			sum = sum + i;
+			
+		}
+		ave = sum / 100;
+	System.out.println(sum);	
+	System.out.println(ave);
+		
+	}
+}

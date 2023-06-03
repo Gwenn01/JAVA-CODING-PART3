@@ -1,0 +1,16 @@
+public class Main {
+	public static void main(String[] args) {
+		// 2 + 3 + 5
+		System.out.print("2\n" + "3\n" + "5\n");
+		int sum = 10;
+		
+		for(int i = 2; i <= 100; i++){
+			if(!(i%2 == 0 || i%3 == 0 || i%5 == 0)){
+				sum += i;
+				System.out.println(i);
+			}
+		}
+		System.out.println(sum);
+		
+	}
+}

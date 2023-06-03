@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Enter String: ");
+		String str = s.nextLine();
+		
+		char[] letter = {'a', 'e', 'i', 'o', 'g'};
+	    char[] jj = {'@', 'e', '!', '0', '9'};
+		char[] c = str.toCharArray();
+		int count = 1;
+		
+		for(int i = 0; i <= c.length-1; i++){
+		    for(int j = 0; j <= jj.length-1; j++){
+		        if(c[i] == letter[j]){
+		            c[i] = jj[j];
+		        }
+		    }
+		    if(i == count){
+		        c[i] = Character.toUpperCase(c[i]);
+		        count += 2;
+		    }
+		}
+		
+		System.out.println();
+		
+		for(int i = 0; i <= c.length-1; i++){
+		    System.out.print(c[i]);
+		}
+	}
+}

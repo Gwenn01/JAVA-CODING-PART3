@@ -1,0 +1,49 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int[] ans = new int[10];
+		String[] question = {
+		    "How many hours do you spend on social media every day?",
+		    "How useful is social media for learning?",
+		    "How often do you post on social media?",
+		    "Do social conversations influence your product choices?",
+		    "How likely are you to buy a product recommended online?",
+		    "How often do you use social media?",
+		    "How often do you check your social media account?",
+		    "On average how much time do you spend on social media?",
+		    "On a scale of 1-5, how addicted are you to social media?",
+		    "How many accounts you follow on the social media account that you most frequently use?",
+			};
+		int A = 0, S = 0, N = 0; 
+		double result = 0, ave;
+		for(int i = 0; i <= ans.length-1; i++){
+		System.out.println(question[i]);
+	    System.out.println("1. Always");
+	    System.out.println("2. Sometimes");
+	    System.out.println("3. Never");
+	    System.out.print("Answer: ");
+	    ans[i] = s.nextInt();
+	    if(ans[i] == 1){
+	    	A += 10;
+	    }else if(ans[i] == 2){
+	    	S += 5;
+	    }else if(ans[i] == 3){
+	    	N += 1;
+	    }
+		}
+		result = A + S + N;
+		ave = result / 10;
+		System.out.println("The average is " + ave);        System.out.println();
+		if(ave >= 8){
+		System.out.print("Exellence");
+		}else if(ave >= 5){
+		System.out.print("Average");	
+		}else if(ave >= 2){
+		System.out.print("Good");	
+		}else{
+		System.out.print("Poor");	
+		}	
+		
+	}
+}

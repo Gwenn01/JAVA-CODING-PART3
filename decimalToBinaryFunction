@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Enter a decinal: ");
+		int num = s.nextInt();
+		
+		System.out.print(decimalBinary(num));
+	}
+	public static int decimalBinary(int num){
+	   
+	   int rem, convert;
+	   String result = "";
+	   
+	   while(num != 0) {
+	    rem = num % 2;
+	    result += rem;
+	    num /= 2;
+	   }
+	   convert = Integer.parseInt(result);
+	    return convert;
+	}
+}

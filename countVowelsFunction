@@ -1,0 +1,22 @@
+public class Main {
+	public static void main(String[] args) {
+		String str = "w3resource";
+		System.out.println("Count of Vowels: " + countVowels(str));
+	}
+	public static int countVowels(String str){
+	    int count = 0;
+	    String vowels = "aeiou";
+	    
+	    char[] c = str.toCharArray();
+	    char[] v = vowels.toCharArray();
+	    
+	    for(int i = 0; i < c.length; i++){
+	        for(int j = 0; j < v.length; j++){
+	            if(c[i] == v[j]){
+	                count++;
+	            }
+	        }
+	    }
+	    return count;
+	}
+}

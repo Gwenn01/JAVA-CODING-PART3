@@ -1,0 +1,31 @@
+public class Main {
+	public static void main(String[] args) {
+		String str = "aouieee";
+		
+		System.out.println(isVowels(str));
+	}
+	public static boolean isVowels(String str){
+	    String vowels = "aeiou";
+	    char[] split = str.toCharArray();
+	    char[] vol = vowels.toCharArray();
+	    
+	    boolean isVowels;
+	    boolean result = true;;
+	    
+	    for(int i = 0; i < split.length; i++){
+	       isVowels = false;
+	       for(int j = 0; j < vol.length; j++) {
+	          if(split[i] == vol[j]){
+	              isVowels = true;
+	              break;
+	          }
+	       }
+	      if(isVowels == false) {
+	         result = false;
+	         break;
+	      }   
+	    }
+	    
+	   return result; 
+	}
+}

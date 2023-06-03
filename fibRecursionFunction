@@ -1,0 +1,17 @@
+public class Main {
+	public static int a = 0, b = 1, c;
+	public static void main(String[] args) {
+		
+		System.out.println(fib(10));
+	}
+	public static int fib(int term){  
+	    if(term > 1){
+	    c = a + b;
+	    a = b;
+	    b = c;
+	    fib(term - 1);
+	    }
+	    
+	    return c;
+	}
+}

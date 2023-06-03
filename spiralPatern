@@ -1,0 +1,52 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		int n = 5; // change this value to change the size of the pattern
+        int i = 0, j = 0, k = 1;
+        int[][] matrix = new int[n][n];
+        
+        // fill the matrix with values
+        while (k <= n * n) {
+            // move right
+            while (j < n && matrix[i][j] == 0) {
+                matrix[i][j] = k++;
+                j++;
+            }
+            j--;
+            i++;
+            
+            // move down
+            while (i < n && matrix[i][j] == 0) {
+                matrix[i][j] = k++;
+                i++;
+            }
+            i--;
+            j--;
+            
+            // move left
+            while (j >= 0 && matrix[i][j] == 0) {
+                matrix[i][j] = k++;
+                j--;
+            }
+            j++;
+            i--;
+            
+            // move up
+            while (i >= 0 && matrix[i][j] == 0) {
+                matrix[i][j] = k++;
+                i--;
+            }
+            i++;
+            j++;
+        }
+        
+        // print the matrix
+        for (int x = 0; x < n; x++) {
+            for (int y = 0; y < n; y++) {
+                System.out.print(matrix[x][y] + "\t");
+            }
+            System.out.println();
+        }
+		
+	}
+}

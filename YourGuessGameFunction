@@ -1,0 +1,98 @@
+import java.util.*;
+public class Main {
+	
+	public static int[] Random = new int[4];
+	public static int[] YourGuess = new int[4];
+	public static String crtAns = "";
+	//main
+	public static void main(String[] args) {
+		
+		random();
+		compute();
+		
+	}
+	//main
+	//
+	public static void random(){
+	    Random random = new Random();   
+	      
+	    for(int i = 0; i < Random.length; i++){
+	        int rand = random.nextInt(8) + 1;
+	            if(Random[i] != rand){
+	                Random[i] = rand;
+	                crtAns += Random[i];
+	             }
+	    }
+	    //Corect Answer:
+	    	
+	    System.out.print("CORRECT ANSWER: " + crtAns);
+	    System.out.println(); 
+	}
+	//
+	public static void yourGuess(){
+	    Scanner s = new Scanner(System.in);
+	    int guess = s.nextInt();
+	    int rem;
+	    
+	    for(int i = YourGuess.length-1; i >= 0 ; i--){
+	        rem = guess % 10;
+	        YourGuess[i] = rem;
+	        guess /= 10;
+	    }	    
+	}
+	//
+	public static int correctNumber(){
+	  int correctNum = 0;      
+	        for(int i = 0; i < YourGuess.length; i++){
+	            for(int j = 0; j < Random.length; j++){
+	                if(YourGuess[i] == Random[j]){
+	                    correctNum++;
+	                    break;
+	                }
+	            }
+	        }
+	   return correctNum;
+	}
+	//
+	public static int correctPosition(){
+	    int correctPos = 0;
+	    for(int i = 0; i < YourGuess.length; i++){
+	        if(YourGuess[i] == Random[i]){
+	            correctPos++;
+	        }
+	    }
+	   return correctPos;
+	}
+	//COMPUTE
+	public static void compute(){
+	    int lives = 5;
+	    boolean isWin = false;
+	   
+	    do{
+	      System.out.println("==YOUR GUESS==");
+	      yourGuess();
+	      System.out.println("Correct Number:" + correctNumber());
+	      System.out.println("Correct Position: " + correctPosition());
+	      if(correctPosition() == 4){
+	          isWin = true;
+	      }
+	      System.out.println("YOUR LIVES " + lives--);
+	      System.out.println();
+	    }while(correctPosition() < 4 && lives != 0);
+	    
+	    
+	    if(isWin){
+	        System.out.println("YOU WIN!!!");
+	    }else{
+	        System.out.println("YOU LOSE!!!");
+	        System.out.println("CORRECT ANSWER: " + crtAns);
+	    }
+	    
+	}
+	//
+};
+	    }
+	    
+	}
+	//
+}

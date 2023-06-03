@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Emter a Numbers: ");
+		int num = s.nextInt();
+		
+		System.out.println("Count of Divisor: " + divisor(num));
+		
+	}
+	public static int divisor(int num){
+	    int count = 0;
+	    for(int i = 1; i <= num; i++){
+	        if(num%i == 0){
+	            count++;
+	        }
+	    }
+	    
+	    return count;
+	}
+}

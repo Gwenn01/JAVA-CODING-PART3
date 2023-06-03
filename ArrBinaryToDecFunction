@@ -1,0 +1,22 @@
+public class Main {
+	public static void main(String[] args) {
+		int[] binary = {1, 0, 0, 1};
+		
+		System.out.println("Result: " + binary(binary));
+	}
+    //
+	public static int binary(int[] binary){
+	    int result = 0;
+	    int multiply = 1;
+	    
+	    for(int i = binary.length-1; i >= 0; i--){
+	        if(binary[i] == 1){
+	            result += multiply;
+	        }
+	        multiply = multiply * 2;
+	    }
+	    
+	    
+	    return result;
+	}
+}

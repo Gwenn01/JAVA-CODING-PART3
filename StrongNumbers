@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {	
+	Scanner s = new Scanner(System.in);
+	System.out.print("Enter a Strong number: ");
+	 int n = s.nextInt();;
+	 
+	 int q = n;
+	 int rem;
+	 int fact = 1, result = 0;
+	 
+	 while(q != 0){
+	 rem = q % 10;
+	 for(int i = 1; i <= rem; i++){
+	 fact = fact * i;	
+	 }
+	 result = result + fact;
+	 fact = 1;
+	 q = q/10;
+	 }
+	 
+	 if(n == result){
+	 System.out.println(n + " is a strong number");
+	 }else{
+	 System.out.print(n +  " not a strong number");	
+	 }
+
+		}
+}

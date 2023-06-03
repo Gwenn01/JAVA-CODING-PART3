@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int sum, result = 0;
+		
+		do{
+		System.out.print("Enter a number:");
+    	sum = s.nextInt();	
+		result = result + sum;	
+		}while(result < 100);
+	   System.out.print(result);
+	
+	}
+}

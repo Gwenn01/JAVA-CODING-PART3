@@ -1,0 +1,48 @@
+public class Main {
+	public static void main(String[] args) {
+		String[] str = {"flower", "flow", "flight"};
+		
+		
+		System.out.println("Common: " + common(str));
+		
+	}
+	public static String common(String[] str){
+	    char[] split = str[0].toCharArray();
+	    char[] split1 = str[1].toCharArray();
+	    char[] split2 = str[2].toCharArray();
+	    String result1 = "";
+	    String result2 = "";
+	    String finalResult = "";
+	    
+	    for(int i = 0; i < split.length; i++){
+	        for(int j = 0; j < split1.length; j++){
+	            if(split[i] == split1[j]){
+	                result1 += split[i];
+	                break;
+	            }
+	        }
+	    }
+	    System.out.println(result1);
+	    for(int i = 0; i < split.length; i++){
+	        for(int j = 0; j < split2.length; j++){
+	            if(split[i] == split2[j]){
+	                result2 += split2[i];
+	                break;
+	            }
+	        }
+	    }
+	    System.out.println(result2);
+	  char[] r1 = result1.toCharArray();
+	  char[] r2 = result2.toCharArray();
+	  
+	  for(int i = 0; i < r1.length; i++){
+	      for(int j = 0; j < r2.length; j++){
+	          if(r1[i] == r2[j]){
+	             finalResult += r1[i];
+	          }
+	      }
+	  }
+	  
+	  return finalResult;
+	}
+}

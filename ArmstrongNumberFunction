@@ -1,0 +1,49 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Enter a number: ");
+		int num = s.nextInt();
+		int inputUser = num;
+		System.out.println("result: " + compute(num));
+		int computed = compute(num);
+		System.out.println(isArmstrong(inputUser, computed));
+	}
+	//
+	public static int compute(int num){
+	    int tempCount = num, count = 0;
+	    
+	    while(tempCount != 0){
+	        count++;
+	        tempCount /= 10;
+	    }
+	    
+	    int rem, sum = 0, multiply, counting = count; 
+	    
+	    while(num != 0){
+	        rem = num%10;
+	        multiply = rem;
+	        while(counting != 1){
+	            multiply = multiply * rem;
+	            counting--;
+	        }
+	        sum += multiply;
+	        num /= 10;
+	        counting = count;
+	    }
+	    return sum;
+	}
+	//
+	public static boolean isArmstrong(int inputUser, int computed){
+	    boolean result = true;
+	    if(inputUser == computed){
+	        result = true;
+	        System.out.println("is Armstrong Number");
+	    }else{
+	        result = false;
+	        System.out.println("is not Armstrong Number");
+	    }
+	    return result;
+	}
+}

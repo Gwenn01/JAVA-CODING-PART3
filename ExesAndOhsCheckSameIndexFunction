@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter (XO): ");
+		String ox = scan.nextLine();
+		
+		System.out.print(isSameAmount(ox));
+		
+	}
+	public static boolean isSameAmount(String ox){
+	    char[] c = ox.toCharArray();
+	    int countx = 0, counto = 0;
+	    
+	    for(int i = 0; i < c.length; i++){
+	        if(c[i] == 'x'){
+	            countx++;
+	        }
+	        if(c[i] == 'o'){
+	            counto++;
+	        }
+	    }
+	    if(countx == counto){
+	        return true;
+	    }else {
+	        return false;
+	    }
+	}
+}

@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter Ex2: ");
+		double ex1 = scan.nextDouble();
+		System.out.print("Enter E(x)2: ");
+		double ex2 = scan.nextDouble();
+		System.out.print("Enter N: ");
+		double n = scan.nextDouble();
+		
+		System.out.print("Standard deviation: " + compute(ex1, ex2, n));
+	}
+	public static double compute(double ex1, double ex2, double n){
+	    double result1, result2, result3, finalResult;
+	    
+	    result1 = (ex2 * ex2) / n;
+	    result2 = ex1 - result1;
+	    result3 = result2 / (n -1);
+	    
+	    finalResult = Math.sqrt(result3);
+	    
+	    return finalResult;   
+	}
+}

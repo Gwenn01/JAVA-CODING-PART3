@@ -1,0 +1,38 @@
+public class Main {
+	public static void main(String[] args) {
+		int[] numbers = {1, 6, 18, 19, 20};
+		
+		System.out.println("Are Number in Order: " + isOrder(numbers));
+	}
+	//
+	public static boolean isOrder(int[] numbers){
+	     boolean result = true;
+	     int[] temp = new int[numbers.length];
+	    
+	    for(int i = 0; i < numbers.length; i++){
+	        temp[i] = numbers[i];
+	        
+	    }
+	    //sorting the numbers
+	    int swap;
+	    for(int i = 0; i < numbers.length; i++){
+	        for(int j = i+1; j < numbers.length; j++){
+	            if(numbers[i] > numbers[j]){
+	               swap = numbers[i];
+	               numbers[i] = numbers[j];
+	               numbers[j] = swap;
+	            }
+	        }
+	    }
+	   
+	    for(int i = 0; i < numbers.length; i++){
+	        if(numbers[i] != temp[i]){
+	            result = false;
+	            break;
+	        }
+	    }
+	    
+	    return result;
+	}
+	
+}

@@ -1,0 +1,36 @@
+public class Main {
+	public static void main(String[] args) {
+		int[] list1 = {2, 4, 3};
+		int[] list2 = {5, 6, 4};
+		
+		System.out.println("Result: " + addTwoReverse(list1, list2));
+	}
+	public static int addTwoReverse(int[] list1, int[] list2){
+	    
+	    int sum;	    
+	    
+	    String reverse1 = "";
+	    for(int i = list1.length-1; i >= 0; i--){
+	        reverse1 += list1[i];
+	    }
+	    String reverse2 = "";
+	    for(int i = list2.length-1; i >= 0; i--){
+	        reverse2 += list2[i];
+	    }
+	    int result1 = Integer.parseInt(reverse1);
+	    int result2 = Integer.parseInt(reverse2);
+	     
+	    sum = result1 + result2;
+	    String result = "";
+	    int rem;
+	    while(sum != 0){
+	        rem = sum%10;
+	        result += rem;
+	        sum /= 10;
+	    }
+	    
+	    int finalResult = Integer.parseInt(result);
+	   
+	    return finalResult;
+	}
+}

@@ -1,0 +1,33 @@
+public class Main {
+	public static void main(String[] args) {
+		int[] arr = {-2, 3, 4, 7, 8, 9, 11, 13, 17};
+		int target = 7;
+		
+		System.out.println("Index: " + search(arr, target));
+	}
+	public static int search(int[] arr, int target){
+	    int result = -1;
+	    int L = 0;
+	    int R = arr.length -1;
+	    int mid, value;
+	    
+	    while(L <= R){
+	      mid = (L + R)  / 2;
+	      value = arr[mid];
+	      System.out.println(L + " " + R);
+	      System.out.println(value);
+	      if(target > value){
+	          L = mid;
+	      }else if(target < value){
+	          R = mid;
+	      }else{
+	          result = mid;
+	          break;
+	      }
+	      
+	      
+	    }
+	    
+	    return result;    
+	}
+}

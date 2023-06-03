@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Enter letter: ");
+		String input = s.nextLine();
+		
+		System.out.print("Missing of Alphabet: " + findMissing(input));
+	}
+	
+	
+	public static char findMissing(String find){
+	    String alpha = "abcdefghijklnmopqrstuvwxyz";
+	    char[] Alphabet = alpha.toCharArray();
+	    char[] Find = find.toCharArray();
+	    char result = ' ';
+	    
+	    for(int i = 0; i < Alphabet.length; i++){
+	        if(Alphabet[i] == Find[0]){
+	           for(int j = 0; j < Find.length; j++) {
+	               if(Alphabet[i] != Find[j]) {      
+	                  result = Alphabet[i];      
+	                  break;
+	               }
+	               i++;
+	           }
+	        }
+	    }
+	    return result;
+	}
+}

@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		String[] people = {"max", "jonh", "alex", "jacob", "mark", "ben"};
+		
+		int count = 1;
+		String result1 = "", result2 = "";
+		
+		for(int i = 0; i <= people.length-1; i++){
+		       if(i <= 1) {
+		            result2 += people[i];
+		            if(i == 0){
+		                result2 = result2 + ", ";
+		            }
+		       }else if(i <= 2){
+		            result1 = result2 + " and " + people[i];
+		       }else{
+		           count++;
+		        }    
+		}
+		
+		if(people.length == 0){
+		      System.out.print("no one like this");
+		}else if(people.length-1 > 2){
+            System.out.print(result2 + " and " + count + " others like this");
+        }else{
+            System.out.print(result1 + " like this");
+        }
+		
+	}
+}

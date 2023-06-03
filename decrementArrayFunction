@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.print("Eneter the size: ");
+		int size = s.nextInt();
+		System.out.print("Enter a number start with: ");
+		int num = s.nextInt();
+		
+		array(size, num);
+	}
+	public static void array(int size, int num){
+	    int[][] arr = new int[size][size];
+	    
+	    for(int i = 0; i < size; i++){
+	        for(int j = 0; j < size; j++){
+	            arr[i][j] = num - j;
+	            if(j == size-1){
+	                num--;
+	            }
+	        }
+	    }
+	    
+	    for(int i = 0; i < size; i++){
+	        for(int j = 0; j < size; j++){
+	            System.out.print(arr[i][j] + " ");
+	        }
+	        System.out.println();
+	    }
+	}
+}

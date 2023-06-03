@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+	    String[] num = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+		int[] Num = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+		
+		System.out.print("Enter a first Number: ");
+		int num1 = s.nextInt();
+		System.out.print("Enter a second Number: ");
+		int num2 = s.nextInt();
+		
+		int sum = num1 + num2;
+		int rem;
+		
+		while(sum != 0){
+		    rem = sum % 10;
+		    for(int i = 0; i < num.length; i++){
+		        if(rem == Num[i]){
+		            System.out.print(num[i] + " ");    
+		        }
+		    }
+		    sum /= 10;
+		}
+		
+		
+	}
+}

@@ -1,0 +1,29 @@
+public class Main {
+	public static void main(String[] args) {
+		int num = 1234;
+		
+		System.out.print("Result: " + bitCounting(num));
+	}
+	public static int bitCounting(int num){
+	    String result = "";
+	    int count = 0;
+	    int rem;
+	    while(num != 0){
+	        rem = num % 2;
+	        if(rem == 0){
+	            result += "0";
+	        }else{
+	            result += "1";
+	        }
+	        num /= 2;
+	    }
+	    System.out.println("Bit: " + result);
+	    char[] split = result.toCharArray();
+	    for(int i = 0; i < split.length; i++){
+	        if(split[i] == '1'){
+	            count++;
+	        }
+	    }
+	    return count;
+	}
+}

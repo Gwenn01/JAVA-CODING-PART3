@@ -1,0 +1,19 @@
+public class Main {
+	public static void main(String[] args) {
+		String str = "The quick brown fox jumps over the lazy dog";
+		
+		System.out.println("Count of Word: " + countWords(str));
+	}
+	public static int countWords(String str){
+	    char[] c = str.toCharArray();
+	    int count = 1;
+	    
+	    for(int i = 0; i < c.length; i++){
+	        if(c[i] == ' '){
+	            count++;
+	        }
+	    }
+	    
+	    return count;
+	}
+}

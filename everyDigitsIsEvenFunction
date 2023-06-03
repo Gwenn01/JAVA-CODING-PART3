@@ -1,0 +1,22 @@
+public class Main {
+	public static void main(String[] args) {
+		int digits = 8642;
+		
+		System.out.println(digitsIsEven(digits));
+	}
+	public static boolean digitsIsEven(int digits){
+	   int rem, result;
+	   boolean isEven = true;
+	   
+	    while(digits != 0){
+	         rem = digits % 10;
+	          if(rem % 2 == 1){
+	              isEven = false;
+	              break;
+	          }
+	          digits /= 10;
+	    }
+	    
+	    return isEven;
+	}
+}

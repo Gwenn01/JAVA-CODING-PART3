@@ -1,0 +1,45 @@
+import java.util.*;
+public class Main {
+	public static int num1;
+	public static int num2;
+	public static void main(String[] args) {
+	    input();
+	    operator();
+	}
+	//
+	public static void input(){
+	    Scanner s = new Scanner(System.in);
+	    System.out.print("Enter a first num: ");
+	    num1 = s.nextInt();
+	    System.out.print("Enter a second num: ");
+        num2 = s.nextInt();  
+	}
+	public static void operator(){
+	    Scanner s = new Scanner(System.in);
+	    System.out.print("Enter a first operator: ");
+	    char op = s.next().charAt(0);
+	    if(op == '+'){
+	        System.out.print(add(num1, num2));
+	    }else if(op == '-'){
+	        System.out.print(subtract(num1, num2));
+	    }
+	    else if(op == '*'){
+	        System.out.print(multiply(num1, num2));
+	    }
+	    else if(op == '/'){
+	        System.out.print(divide(num1, num2));
+	    }
+	}	
+	public static int add(int num1, int num2){
+		    return num1 + num2;
+	}
+	public static int subtract(int num1, int num2){
+		    return num1 - num2;
+	}
+	public static int multiply(int num1, int num2){
+		    return num1 *  num2;
+	}
+	public static int divide(int num1, int num2){
+		    return num1 / num2;
+	}
+}

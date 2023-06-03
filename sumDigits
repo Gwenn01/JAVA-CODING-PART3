@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Enter a digits: ");
+		int digits = s.nextInt();
+		int rem, sum = 0, temp = digits;
+		while(digits != 0){
+		    rem = digits % 10;
+		    sum += rem;
+		    digits /= 10;
+		}
+		System.out.println(temp + " --> " + sum);
+	}
+}

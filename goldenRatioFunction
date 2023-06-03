@@ -1,0 +1,44 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Enter what Length ");
+		System.out.println("a = a | b = b | c = ab: ");
+		char inputW = s.next().charAt(0);
+		System.out.print("Enter how Length: ");
+		int inputH = s.nextInt();
+		
+		compute(inputW, inputH);
+	}
+	//
+	public static void compute(char inputW, double inputH){
+	    System.out.println(inputW);
+	    double a, b, ab, goldenRatio = 1.618;
+	    if(inputW == 'a'){
+	        a = inputH;
+	        ab = a * goldenRatio;
+	        b = ab - a;
+	       System.out.println("a = " + a);
+	       System.out.println("b = " + b);
+	       System.out.println("ab = " + ab);
+	    }else if(inputW ==  'b'){
+	        b = inputH;
+	        a = b * goldenRatio;
+	        ab =  a + b;
+	       System.out.println("a = " + a);
+	       System.out.println("b = " + b);
+	       System.out.println("ab = " + ab);
+	    }else if(inputW == 'c'){
+	        ab = inputH;
+	        a = ab / goldenRatio;
+	        b =  a - ab;
+	       System.out.println("a = " + a);
+	       System.out.println("b = " + b);
+	       System.out.println("ab = " + ab);
+	    }else{
+	         System.out.print("Invalid!! plss Enter What length");
+	    }
+	}
+	//
+}
